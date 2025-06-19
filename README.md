@@ -1,88 +1,103 @@
-Fruits & Vegetables Recognition System
+# 🍎🥕 Fruits & Vegetables Recognition System 🥦🍇
 
-An AI-powered application that leverages Convolutional Neural Networks (CNN) to accurately classify images of fruits and vegetables. This system is designed to assist in automating the identification process, which can be beneficial for various applications such as inventory management, dietary tracking, and educational tools.
+A user-friendly web application that leverages Artificial Intelligence (AI) and Deep Learning to accurately identify fruits and vegetables from images using a Convolutional Neural Network (CNN). Built with Streamlit and TensorFlow.
 
+---
 
-Features
+## 🚀 Demo
 
-Accurate Classification: Utilizes a trained CNN model to distinguish between various fruits and vegetables.
+![Demo Screenshot](Fruits.jpg)
 
-User-Friendly Interface: Simple command-line interface for image input and result display.
+---
 
-Extensible Architecture: Modular codebase allowing easy updates and integration with other systems.
+## ✨ Features
+- **High Accuracy Recognition**: Trained on a diverse dataset of fruits and vegetables.
+- **User-Friendly Interface**: Upload an image and get instant predictions.
+- **Educational Insights**: Learn about the predicted item.
+- **Modern Web App**: Built with Streamlit for easy access and interactivity.
 
-Efficient Performance: Optimized for quick image processing and prediction.
+---
 
-Technologies Used
+## 🧠 How It Works
+1. **Upload an Image**: The user uploads a photo of a fruit or vegetable.
+2. **Image Processing**: The image is resized and preprocessed for the model.
+3. **Prediction**: The trained CNN model predicts the class.
+4. **Result**: The predicted label is displayed to the user.
 
-Python 3.x: Primary programming language.
+---
 
-TensorFlow & Keras: For building and training the CNN model.
+## 📂 Dataset & Labels
+The model is trained on a curated dataset of high-quality images, covering the following categories:
 
-NumPy: Handling numerical operations.
+<details>
+<summary>Click to view all 36 classes</summary>
 
-OpenCV: Image processing and manipulation.
+```
+apple, banana, beetroot, bell pepper, cabbage, capsicum, carrot, cauliflower, chilli pepper, corn, cucumber, eggplant, garlic, ginger, grapes, jalepeno, kiwi, lemon, lettuce, mango, onion, orange, paprika, pear, peas, pineapple, pomegranate, potato, raddish, soy beans, spinach, sweetcorn, sweetpotato, tomato, turnip, watermelon
+```
+</details>
 
-Pillow (PIL): Image loading and preprocessing.
+---
 
+## 🛠️ Installation
 
-Fruits.jpg: Sample image used in the project.
+1. **Clone the repository**
+   ```bash
+   git clone <repo-url>
+   cd Fruit_veg_webapp
+   ```
+2. **Install dependencies**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Ensure the following files are present:**
+   - `trained_model.h5` (pre-trained model)
+   - `labels.txt` (class labels)
+   - `Fruits.jpg` (demo image)
 
-labels.txt: Text file containing the labels corresponding to the classes the model can predict.
+---
 
-main.py: Main script to run the prediction.
+## ▶️ Usage
 
-requirement.txt / requirements.txt: List of dependencies required to run the project.
+Run the Streamlit app:
+```bash
+streamlit run main.py
+```
 
-trained_model.h5: Pre-trained CNN model for fruit and vegetable classification.
+- Open your browser to the provided local URL.
+- Use the sidebar to navigate between Home, About Project, and Prediction.
+- Upload an image in the Prediction tab and click **Predict**.
 
+---
 
-⚙️ Installation & Setup
+## 🗂️ Project Structure
+```
+Fruit_veg_webapp/
+├── Download_image/         # Sample images
+├── Fruits.jpg              # Demo image
+├── labels.txt              # Class labels
+├── main.py                 # Streamlit web app
+├── requirements.txt        # Python dependencies
+├── trained_model.h5        # Trained CNN model
+└── README.MD               # Project documentation
+```
 
-Clone the Repository:
+---
 
-git clone https://github.com/AashuBaria03/Fruits-Vegetables-Recognition-System.git
-cd Fruits-Vegetables-Recognition-System
-Create a Virtual Environment (Optional but recommended):
+## 🚦 Future Work
+- Expand dataset with more categories and images
+- Integrate real-time camera support
+- Deploy as a web service or mobile app
+- Add nutritional and culinary information for each class
 
+---
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies:
+## 🙏 Acknowledgements
+- TensorFlow & Keras for deep learning
+- Streamlit for rapid web app development
+- Open-source datasets and contributors
 
+---
 
-pip install -r requirements.txt
-
-
-Usage
-Prepare Your Image:
-
-Place the image you want to classify in the project directory or note its path. Ensure the image is clear and contains a single fruit or vegetable.
-
-Run the Prediction Script:
-
-
-python main.py
-The script will prompt you to enter the path of the image you wish to classify.
-
-View Results:
-
-The model will process the image and output the predicted class (e.g., "Apple", "Carrot") along with the confidence score.
-
-📊 Model Performance
-
-Model Architecture: Convolutional Neural Network (CNN) with multiple layers optimized for image classification tasks.
-
-Training Data: Dataset comprising various images of fruits and vegetables, preprocessed for optimal training.
-
-Accuracy: Achieved high accuracy on validation and test datasets, ensuring reliable predictions.
-
-📌 Future Enhancements
-
-GUI Integration: Develop a graphical user interface for easier interaction.
-
-Mobile Application: Extend functionality to Android/iOS platforms.
-
-Expanded Dataset: Include more classes and diverse images to improve model robustness.
-
-Nutritional Information: Provide details like calories, vitamins, and minerals for each classified item.
+## 📄 License
+This project is for educational purposes. Please check dataset and model licenses before commercial use.
